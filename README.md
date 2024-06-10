@@ -73,7 +73,7 @@ O Sistema de Gerenciamento de Academia é uma solução completa para a administ
 
 ### 📋 Pré-requisitos
 
-De que coisas você precisa para instalar o software e como instalá-lo?
+De que coisas você precisa para instalar o software!
 
 ```
 - Git
