@@ -1,73 +1,127 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Sistema de Gerenciamento de Academia
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Deploy
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Deploy do Back: [Clique-aqui](https://back-end-gym-software.up.railway.app/)
 
-## Description
+Projeto completo: [Clique-aqui](https://gymsoftware.vercel.app/dashboard/home)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
+```
+Login: guest
+Senha: guest123
 ```
 
-## Running the app
+## Sumário
 
-```bash
-# development
-$ npm run start
+1. [Visão Geral](#visão-geral)
+2. [Funcionalidades](#funcionalidades)
+3. [Ferramentas Utilizadas](#ferramentas-utilizadas)
+4. [Arquitetura do Sistema](#arquitetura-do-sistema)
+5. [Configuração do Ambiente](#configuração-do-ambiente)
+6. [Documentação com Swagger](#documentação-com-swagger)
+7. [Deploy](#deploy)
 
-# watch mode
-$ npm run start:dev
+# Visão Geral
 
-# production mode
-$ npm run start:prod
+O Sistema de Gerenciamento de Academia é uma solução completa para a administração de academias de ginástica. Este projeto oferece funcionalidades essenciais para gerenciar membros, treinadores e atividades da academia. Desenvolvido utilizando as tecnologias mais modernas, o sistema garante eficiência, segurança e escalabilidade.
+
+## Funcionalidades
+
+- Gestão de Usuários: Controle completo sobre membros, treinadores e administradores da academia, com funcionalidades de registro, autenticação e autorização.
+
+- Gerenciamento de Atividades: Criação, atualização e exclusão de atividades físicas e treinos personalizados para os membros.
+
+- Relatórios e Análises: Geração de relatórios detalhados sobre o desempenho dos membros, frequência de uso da academia e outras métricas importantes.
+
+- Integração com Pagamentos: Suporte para integração com sistemas de pagamento para gerenciar assinaturas e mensalidades dos membros.
+
+- Notificações: Sistema de notificações para manter a equipe e os membros informados sobre eventos, novos treinos e atualizações.
+
+- Envio de E-mails ao suporte: Funcionalidade para envio de e-mails por funcionários para a equipe de suporte, permitindo relatar problemas, bugs ou solicitações de ajuda.
+
+## Ferramentas Utilizadas
+
+- **TypeScript**: Linguagem de programação utilizada para desenvolvimento do projeto.
+- **Nest.js**: Framework para construção de aplicações Node.js eficientes, confiáveis e escaláveis.
+- **TypeORM**: ORM utilizado para interagir com o banco de dados PostgreSQL.
+- **Swagger**: Ferramenta para documentação e teste dos endpoints da API.
+- **Redis**: Utilizado como cache para otimização de performance.
+- **PostgreSQL**: Banco de dados relacional utilizado para armazenar os dados.
+- **AWS/BackBlaze**: Bucket para gerenciamento de mídias.
+
+## Arquitetura do Sistema
+
+#### A arquitetura do sistema é composta por uma aplicação back-end que provê uma API RESTful em JSON. Os principais componentes são:
+
+- ##### Users: Responsável por todas as operações relacionadas aos usuários do sistema, incluindo registro, autenticação, atualização de perfil e exclusão de conta.
+
+- ##### Notifications: Este componente gerencia o envio de notificações para os usuários, fornecendo funcionalidades para enviar mensagens, alertas e lembretes sobre eventos importantes.
+
+- ##### Plans: Aqui reside a lógica para o gerenciamento de planos de assinatura ou mensalidades dos usuários. Implementa operações CRUD para criar, atualizar, visualizar e excluir planos.
+
+- ##### Students: Responsável por todas as operações relacionadas aos alunos da academia, incluindo registro, matrícula em planos, histórico de treinos e informações pessoais.
+
+- ##### Training_Workout: Este componente gerencia os treinos dos alunos, fornecendo funcionalidades para criar e modificar rotinas de treino personalizadas.
+
+- ##### Training: Similar ao componente Training_Workout, este é responsável por gerenciar os treinos dos alunos, fornecendo funcionalidades para agendar, cancelar e visualizar sessões de treino.
+
+- ##### Workouts: Aqui reside a lógica para a manipulação de exercícios e rotinas de treino. Implementa operações CRUD para criar, atualizar, visualizar e excluir exercícios e planos de treino.
+
+- ##### Auth: Contém os controladores e serviços responsáveis pela autenticação do usuário. Aqui fica a lógica para lidar com o login e outras operações relacionadas à autenticação, como registro, recuperação de senha, etc.
+
+#### Além disso, o sistema utiliza os serviços da AWS (Amazon Web Services) e do Backblaze para upload e armazenamento de fotos. Na AWS, é utilizado o Amazon S3 para armazenamento seguro e escalável de fotos, enquanto no Backblaze, o B2 Cloud Storage é aproveitado para armazenamento de backups e arquivos de grande volume. Essa combinação de provedores de nuvem oferece uma solução confiável e eficiente para o gerenciamento de fotos no sistema.
+
+### 📋 Pré-requisitos
+
+De que coisas você precisa para instalar o software e como instalá-lo?
+
+```
+- Git
+- TypeScript
+- Node.JS
+
 ```
 
-## Test
+### Configuração do Ambiente
 
-```bash
-# unit tests
-$ npm run test
+1. Clone o repositório:
 
-# e2e tests
-$ npm run test:e2e
+   ```bash
+   git clone git@github.com:leocarvalhos/back_gym_software.git
+   cd <back_gym_software>
+   ```
 
-# test coverage
-$ npm run test:cov
-```
+2. Crie um banco de dados local ou use algum conhecido como por exemplo: [ElephantSQL](https://www.elephantsql.com/), [Supabase](https://www.supabase.com). Faça a mesma coisa para o Mailer e Bucket: [SendGrid](https://sendgrid.com/), [BackBlaze](https://www.backblaze.com/)
 
-## Support
+3. Crie e configure com as variáveis de ambiente no arquivo `.env` com os dados abaixo:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+   ```bash
+    MAILER_HOST=
+    MAILER_PORT=
+    MAILER_USER=
+    MAILER_PASS=
+    DB_HOST=
+    DB_USERNAME=
+    DB_PASSWORD=
+    DB_NAME=
+    DB_PORT=
+    DB_TYPE=
+    BB_ENDPOINT=
+    BB_KEY_ID=
+    BB_SECRET_KEY=
+    BB_NAME=
+    JWT_PASS=
+   ```
 
-## Stay in touch
+4. Inicie o projeto com o comando
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+   ```bash
+      npm run dev
+   ```
 
-## License
+5. Agora o projeto estará disponível na porta 3000
+   ```bash
+      http://localhost:3001/
+   ```
 
-Nest is [MIT licensed](LICENSE).
+#### PS: É necessário criar planos e usuários antes de começar a cadastrar os alunos.
