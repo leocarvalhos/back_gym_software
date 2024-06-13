@@ -1,6 +1,6 @@
 # Sistema de Gerenciamento de Academia
 
-[![Assista ao vídeo](https://www.youtube.com/watch?v=49uxnc1f7KY&ab_channel=LeandroCarvalho)
+[Assista ao vídeo](https://www.youtube.com/watch?v=49uxnc1f7KY&ab_channel=LeandroCarvalho)
 
 ## Sumário
 
