@@ -1,15 +1,6 @@
 # Sistema de Gerenciamento de Academia
 
-## Deploy
-
-Deploy do Back: [Clique-aqui](https://back-end-gym-software.up.railway.app/)
-
-Projeto completo: [Clique-aqui](https://gymsoftware.vercel.app/dashboard/home)
-
-```
-Login: guest
-Senha: guest123
-```
+[![Assista ao vídeo](https://www.youtube.com/watch?v=49uxnc1f7KY&ab_channel=LeandroCarvalho)
 
 ## Sumário
 
